@@ -22,7 +22,6 @@ function getEmployeeByName(employeeName) {
   return data.employees
     .find(({ firstName, lastName }) => firstName === employeeName || lastName === employeeName);
 }
-console.log(getEmployeeByName('Burl'));
 
 function createEmployee(personalInfo, associatedWith) {
 }
