@@ -16,13 +16,15 @@ function getAnimalsOlderThan(animal, age) {
 }
 
 function getEmployeeByName(employeeName) {
-  const nameSelected = data.employees
+  if (employeeName === undefined) {
+    return [];
+  }
+  return data.employees
     .find(({ firstName, lastName }) => firstName === employeeName || lastName === employeeName);
-  return nameSelected;
 }
+console.log(getEmployeeByName('Burl'));
 
 function createEmployee(personalInfo, associatedWith) {
-  // seu código aqui
 }
 
 function isManager(id) {
