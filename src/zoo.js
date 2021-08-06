@@ -52,6 +52,11 @@ function countAnimals(speciesAnimals) {
   if (speciesAnimals) {
     return data.species.find((getName) => getName.name === speciesAnimals).residents.length;
   }
+  const contador = data.species.reduce((acc, { name }) => {
+    acc[name] = data.species.find((nameSpecie) => nameSpecie.name === name).residents.length;
+    return acc;
+  }, {});
+  return contador;
 }
 
 function calculateEntry(entrants) {
