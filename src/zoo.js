@@ -68,6 +68,7 @@ function calculateEntry(entrants) {
         .values(entrants)[index] * Object
         .values(prices)[Object.keys(prices).indexOf(value)];
     }
+    return valor;
   });
   return valor.reduce((acc, item) => acc + item, 0);
 }
