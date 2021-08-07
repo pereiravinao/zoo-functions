@@ -86,11 +86,16 @@ function getOldestFromFirstSpecies(id) {
 }
 
 function increasePrices(percentage) {
-  // seu código aqui
+  const newPrice = Object.keys(prices).reduce((acc, item, index) => {
+    acc[item] = parseFloat(((((Object.values(prices))[index] * `1.${percentage}`) + 0.001))
+      .toFixed(2));
+    return acc;
+  }, {});
+  Object.assign(prices, newPrice);
+  return prices;
 }
 
 function getEmployeeCoverage(idOrName) {
-  // seu código aqui
 }
 
 module.exports = {
