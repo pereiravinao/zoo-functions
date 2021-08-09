@@ -85,7 +85,7 @@ function getSchedule(dayName) {
     return acc;
   }, {});
   Object.assign(agenda, dayClosed);
-  const daySelect = Object.keys(agenda).reduce((acc, { dayNmae }) => {
+  const daySelect = Object.keys(agenda).reduce((acc, { dayNamee }) => {
     acc[dayName] = agenda[dayName];
     return acc;
   }, {});
@@ -110,6 +110,24 @@ function increasePrices(percentage) {
 }
 
 function getEmployeeCoverage(idOrName) {
+  if (!idOrName) {
+    const objectReturn = employees.reduce((acc, { firstName, lastName, responsibleFor }) => {
+      acc[`${firstName} ${lastName}`] = responsibleFor
+        .map((responseId) => species.find((specie) => specie.id === responseId).name);
+      return acc;
+    }, {});
+    return objectReturn;
+  }
+  const employeeSelected = employees
+    .find(({ firstName, lastName, id }) => (
+      idOrName === firstName || idOrName === lastName || idOrName === id));
+  const employeeResponse = employeeSelected.responsibleFor
+    .map((responseId) => species.find((specie) => specie.id === responseId).name);
+  const objectEmployeeSelect = employees.reduce((acc) => {
+    acc[`${employeeSelected.firstName} ${employeeSelected.lastName}`] = employeeResponse;
+    return acc;
+  }, {});
+  return objectEmployeeSelect;
 }
 
 module.exports = {
