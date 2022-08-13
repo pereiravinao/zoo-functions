@@ -1,16 +1,18 @@
-# 🚧 README em construção 🚧
 
-<!-- Olá, Tryber!
+# Zoo Functions
 
-Esse é apenas um arquivo inicial para o README do seu projeto.
+Um dos primeiros projetos em JS, o principal foco foi o uso de Higher Order Functions.
 
-É essencial que você preencha esse documento por conta própria, ok?
+## 🛠 Habilidades
+- Produzir código legível, conciso e expressivo utilizando as novas funcionalidades do ES6;
+- Utilizar as Higher Order Functions para manipular e criar arrays;
+- Escolher a Higher Order Function mais adequada para a obtenção de um resultado esperado;
+- Aprender a usar de forma conjunta as Higher Order Functions;
 
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
+## Autores
+- [@pereiravinao](https://www.github.com/pereiravinao)
 
-⚠️ IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
+## Apêndice
+Este repositório contém um template de uma aplicação NodeJS criado e configurado pela escola Trybe.
 
--->
+
